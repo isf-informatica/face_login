@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Successful!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+
+        .success-container {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fade-in 2s ease-in-out forwards;
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #4CAF50;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f0f8ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        p {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .logout-button:hover {
+            background-color: #0056b3;
+        .welcome-text {
+            font-size: 72px; /* Adjust the font size as needed */
+            color: #4CAF50;
+            animation: bounce-in 1s ease-in-out;
+        }
+
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0.2);
+                opacity: 0;
+            }
+            80% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        .welcome-text {
+            font-size: 72px; /* Adjust the font size as needed */
+            color: #4CAF50;
+            animation: bounce-in 1s ease-in-out;
+        }
+    
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0.2);
+                opacity: 0;
+            }
+            80% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+        </style>
+    </head>
+    <body>
+        <div class="success-container">
+            <h1>Login Successful!</h1>
+            <p class="welcome-text">Welcome, {% for name in names %}{{ name }} {% endfor %}!</p>
+            <button class="logout-button" onclick="goToLoginPage()">Logout</button>
+        </div>
+    
+        <script>
+            function goToLoginPage() {
+                // Redirect back to the login page (page.html)
+                window.location.href = "/signin";
+            }
+        </script>
+    </body>
+    </html>
